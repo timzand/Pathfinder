@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+
+    <title>Pathfinder Vizualiser</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Pathfinder vizualiser</h1>
+    </header>
+
+    <div id="container_header">
+        <div id="container_options">
+
+            <label for="algorithms">Algorithm:</label>
+            <select name="algorithms">
+                <option> Djikstra</option>
+                <option> A*</option>
+            </select>
+            <label>Grid:</label>
+
+            <label>X:</label>
+            <input id="gridX" value="100">
+
+            <label>Y:</label>
+            <input id="gridY" value="100">
+
+        </div>
+        <div id="container_text">
+            <p> Click on a box to create a wall the algorithm has to navigate around. 
+                Click again on the box to remove the wall.
+                The yellow colored boxes is where the algorithm is currently checking the path. 
+                The green is the fastest path that is found.
+            </p>
+        </div>
+
+        <button id="btn_generate" onclick="main()">Generate</button>
+    </div>
+
+    <section id="section_grid">
+        <div id="container_grid">
+
+        </div>
+    </section>
+
+</body>
+</html>
